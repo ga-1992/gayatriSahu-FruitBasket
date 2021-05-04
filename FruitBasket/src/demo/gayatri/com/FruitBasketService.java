@@ -21,7 +21,7 @@ class BasketItem implements Item
 	    @SuppressWarnings("deprecation")
 		public BasketItem(BigDecimal  price, RoundingMode ROUND_HALF_EVEN)
 	    {
-	        if (price == null || price.intValue() < 0) throw new IllegalArgumentException("Price can't be negative");
+	        if (price == null || price.intValue() < 0) throw new IllegalArgumentException(" This price not allowed");
 	        if (price.setScale(2,ROUND_HALF_EVEN).compareTo(price) != 0 ) throw new IllegalArgumentException("Price should have only 2 decimals");
 	        this.price = price;
 	    }
