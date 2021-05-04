@@ -8,9 +8,7 @@ import java.util.List;
 
 public interface FruitBasketService 
 {
-
-
-    BigDecimal  totalCost(List<List<Item>> baskets, HashSet<Class> allowedItems);
+     BigDecimal  totalCost(List<List<Item>> baskets, HashSet<Class> allowedItems);
 }
    interface Item {
 
@@ -33,11 +31,11 @@ class BasketItem implements Item
 	    }
 
 	    @Override
-	    public boolean equals(Object o) {
-	        if (this == o) return true;
-	        if (o == null || getClass() != o.getClass()) return false;
+	    public boolean equals(Object obj) {
+	        if (this == obj) return true;
+	        if (obj == null || getClass() != obj.getClass()) return false;
 
-	        BasketItem that = (BasketItem) o;
+	        BasketItem that = (BasketItem) obj;
 
 	        return price != null ? price.equals(that.price) : that.price == null;
 
